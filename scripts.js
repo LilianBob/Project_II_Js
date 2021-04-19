@@ -15,11 +15,27 @@ $(document).ready(function(){
             $('#hoverImage img').attr('src', 'vertical_lines.jpeg');
         });
     });
-    // $('.nav-link').click(function(){
-    //     $get("https://fakestoreapi.com/products", function(res){
-    //         $('.col p-2').html('<li>' + res[0].title + '</li>');
-    //         $('.col p-2').html('<li>' + res[0].description + '</li>');
-    //         $('.col p-2').html('<li>' + res[0].image + '</li>');
-    //     }, "json");
-    // });
+    $('#userForm .btn-primary').click(function(){
+        $('#userForm').css("display", "block");
+        $('#userId').attr('style', 'display: block');
+        // to be figured out later...only shows for a second
+    });
+    $('#allProducts .btn').click(function(){
+            $.get("https://fakestoreapi.com/products", function(res){
+                var newTab = window.open();
+                for (var i=0; i<res.length; i++){
+                    var output="";
+                    output += `<div class="allProductsHere">`;
+                    output += `<p> Title: ${res[i].title}</p>`;
+                    output += `<p> Description: ${res[i].description}</p>`;
+                    output += `<p> Price: ${res[i].price}</p>`;
+                    output += `<p> Image: ${res[i].image}</p>`;
+                    output += `<hr/>`;
+                    output += `</div>`;
+                    // $('.contentOn').append(output);
+                    newTab.document.write(output);
+                };   
+            }, "json");
+            
+        });  
 });
