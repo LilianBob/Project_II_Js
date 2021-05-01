@@ -22,14 +22,16 @@ $(document).ready(function(){
     });
     $('#allProducts .btn').click(function(){
             $.get("https://fakestoreapi.com/products", function(res){
-                var newTab = window.open();
+                var newTab = window.open('', 'List of Products', '');
+                
                 for (var i=0; i<res.length; i++){
                     var output="";
                     output += `<div class="allProductsHere">`;
                     output += `<p> Title: ${res[i].title}</p>`;
                     output += `<p> Description: ${res[i].description}</p>`;
                     output += `<p> Price: ${res[i].price}</p>`;
-                    output += `<p> Image: ${res[i].image}</p>`;
+                    output += `<p> Image: <img src="${res[i].image}" $('img').width('50px')
+                    .height('50px');></p>`;
                     output += `<hr/>`;
                     output += `</div>`;
                     // $('.contentOn').append(output);
