@@ -17,6 +17,12 @@ nav .navbar .navbar-expand-xl{
 h1{
     padding-left: 30px;   
 }
+h2{
+    text-align: center;
+}
+.jumbotron{
+    padding-left: 170px;
+}
 .input-group {
     align-items: center;
     background-color:white;
@@ -90,6 +96,7 @@ header{
 #succulentselection{
     display: inline-flex;
     background: linear-gradient(to right, rgb(34, 223, 182),white, white);
+    padding-left: 10px;
 }
 img[src*="jpeg"]{
     border:2px solid black;
@@ -136,9 +143,9 @@ img[src*="jpeg"]{
 #cookiebanner .btn{
     margin-left:50px;
 }
-#hoverImage:hover{
+/* #hoverImage:hover{
     background: gray;
-}
+} */
 
 @media(max-width:768px){
     header{
