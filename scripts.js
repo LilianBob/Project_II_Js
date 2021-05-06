@@ -40,4 +40,34 @@ $(document).ready(function(){
             }, "json");
             
         });  
+        
+    $('#slimelectro .btn-secondary, a[href="Electronics"]').click(function(){
+        $.get("https://fakestoreapi.com/products", function(res){
+            // if ($(this).attr("href") == Electronics){
+                for (var i=8; i<14; i++){
+                    var electronics="";
+                    electronics += `<table class="electronics">`;
+                    electronics += `<thead>Electronics</thead>`;
+                    electronics += `<tr>`;
+                    electronics += `<td> Title: ${res[i].title}</td>`;
+                    electronics += `<td> Description: ${res[i].description}</p>`;
+                    electronics += `<td> Price: ${res[i].price}</p>`;
+                    electronics += `<td> Image: <img src="${res[i].image}" $('img').width('50')
+                    .height('50');></p>`;
+                    electronics += `</tr`;
+                    electronics += `</table>`;
+                    $(electronics).appendTo('#Electronics');
+                    // $('.succulenticon').hide();
+
+                    $('#Electronics').show().siblings().hide();
+
+                    // $('a. nav-link').attr('href', 'electronics');
+                };
+                // e.preventDefault();
+            // };
+            
+        }, "json");
+        // showContent(res.currentTarget.hash);
+        // res.preventDefault();
+    }); 
 });
