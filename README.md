@@ -6,14 +6,14 @@
 
 ### Contributing
 ##### Contributions are welcome:
-- Pull Requests
+* Pull Requests
 ##### For guidelines see:
 [Fork a Repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
   - Fork the Repo
   - Clone the Repo
   - Make and commit changes for improvement
   - Make a pull request
-- Contributions by opening an issue on the Repo page are also welcome
+* Contributions by opening an issue on the Repo page are also welcome
 
 ### Deployment
-##### view on [github-pages](https://lilianbob.github.io/gen_store/)
+##### view on [EasyBay](https://lilianbob.github.io/gen_store/)
